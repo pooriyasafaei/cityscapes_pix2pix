@@ -54,13 +54,11 @@ We use a Cityscapes-based Pix2Pix dataset, which contains pairs of:
 ### Download and Preparation
 Download the dataset from [Kaggle](https://www.kaggle.com/datasets/balraj98/cityscapes-pix2pix-dataset/data?select=val). Extract it into a directory like:
 ```
-dataset/
+cityscapes_pix2pix/
   train/
-    *_input.jpg
-    *_target.jpg
+    {image_number}.jpg
   val/
-    *_input.jpg
-    *_target.jpg
+    {image_number}.jpg
 ```
 
 ### Structure
@@ -71,8 +69,7 @@ dataset/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/pix2pix-implementation.git
-   cd pix2pix-implementation
+   git clone https://github.com/pooriyasafaei/cityscapes_pix2pix.git
    ```
 
 2. Install dependencies (Python 3.7+ recommended):
@@ -99,11 +96,7 @@ dataset/
    The training script will periodically display generated samples and save model checkpoints.
 
 ### Inference
-1. After training, use the trained generator to translate new segmented images:
-   ```bash
-   python inference.py --input_dir ./test_inputs --output_dir ./outputs --model_path ./checkpoints/generator.pth
-   ```
-   This will generate real-like images corresponding to your segmented inputs.
+1. After training, use the trained generator to translate new segmented images using ```show_generated_images``` function. This will generate real-like images corresponding to your segmented inputs.
 
 ## Hyperparameters and Settings
 
@@ -125,11 +118,7 @@ You can expect results where:
 
 ## Loss Plots
 
-After training completes, the loss functions for both the Generator and Discriminator can be plotted using:
-```bash
-python plot_loss.py --log_file ./training_log.json
-```
-You should see the Discriminator loss stabilizing and the Generator loss converging.
+After training completes, the loss functions for both the Generator and Discriminator can be plotted using last three cells in the notebook. You should see the Discriminator loss stabilizing and the Generator loss converging.
 
 ## References
 
