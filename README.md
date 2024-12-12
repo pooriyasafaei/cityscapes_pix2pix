@@ -88,11 +88,9 @@ cityscapes_pix2pix/
 ## Usage
 
 ### Training
-1. Adjust hyperparameters and paths in `train.py` as needed.
-2. Run the training:
-   ```bash
-   python train.py --data_dir ./dataset --epochs 50 --batch_size 4 --lr 2e-4
-   ```
+0. Download and prepare `citysxapes` dataset and load images by running the first cells. 
+1. Adjust hyperparameters and paths in `train` section as needed. We set a default parameters for you in the notebook.
+2. Run the training cells.
    The training script will periodically display generated samples and save model checkpoints.
 
 ### Inference
