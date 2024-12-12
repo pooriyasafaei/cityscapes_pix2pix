@@ -118,6 +118,12 @@ You can expect results where:
 
 After training completes, the loss functions for both the Generator and Discriminator can be plotted using last three cells in the notebook. You should see the Discriminator loss stabilizing and the Generator loss converging.
 
+## Generated Sample
+
+Here you can see a sample generated from the segmented image by the default hyperparameters and after 50 epochs.
+
+![Screenshot from 2024-12-12 20-41-04](https://github.com/user-attachments/assets/279caaf0-8080-4346-b4e4-22b7458115dd)
+
 ## References
 
 - **Pix2Pix Paper:** [Image-to-Image Translation with Conditional Adversarial Networks](https://arxiv.org/abs/1611.07004) by Isola et al.
